@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="sec">
+    <section>
+      <h1 id="heading">Get the FRIENDS character right?</h1>
+      <div class="center_div">
+        <div class="details">
+          <label>Enter your name?</label><br />
+          <input type="text" name="" id="name_id" />
+        </div>
+        <div class="image_div">
+          <img src="friends.jpg" width="200" height="200" id="img_change" />
+          <button onclick="myFun()">Click Me</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const myFun = () => {
+        let name = document.getElementById("name_id").value;
+        alert(name);
+        let img = document
+          .getElementById("img_change")
+          .setAttribute("src", `https://joeschmoe.io/api/v1/${name}`);
+      };
+    </script>
+  </body>
+</html>
